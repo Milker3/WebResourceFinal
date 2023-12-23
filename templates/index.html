@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}{% endblock %}
+
+{% block content%}
+    <h1>Страница ввода данных</h1>
+    <form action="/graph" method="post">
+        <label for="data">Input country:</label>
+            <select name="data" id="data">
+              <option value="{{country_list[0]}}" default>{{country_list[0]}}</option>
+             {% for name in country_list[1:]%}
+              <option value="{{name}}">{{name}}</option>
+              {% endfor %}
+            </select>
+        <button type="submit">get population</button>
+    </form>
+
+{% endblock %}

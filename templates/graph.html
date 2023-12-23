@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block title %}{% endblock %}
+
+{% block content%}
+    <h1>Graph - {{country}}</h1>
+    <img src="data:image/png;base64,{{ plot_url }}" alt="График">
+
+{% endblock %}
